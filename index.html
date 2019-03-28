@@ -1,95 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>PostIt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+    <link rel="stylesheet" href="lib/css/menu-bar.css">
+    <link rel="stylesheet" href="lib/css/postit-buttons.css">
+    <title>PostIt</title>
 </head>
+
 <body>
 
-<!-- Barra de menu -->
-<header>
-<nav class="navbar navbar-default container">
-  <!-- Logotipo -->
-  <div class="navbar-header">
-    <a class="navbar-brand" href="#">PostIt!</a>
-  </div>
-  <!-- Ítens a esquerda -->
-  <div class="navbar-left input-group">
-    <input id="conteudoBusca" class="form-control" placeholder="O que você procura?"></input>
-    <div class="form-group input-group-btn">
-      <button id="buscarPostIt" type="button" class="btn btn-default">Buscar</button>
-    </div>
-  </div>
-  <!-- Ítens a direita -->
-  <ul class="nav navbar-nav navbar-right">
-    <li><a id="alteraLayout" class="glyphicon glyphicon-align-justify"></a></li>
-    <li><a id="exibirAjuda" class="glyphicon glyphicon-question-sign"></a></li>
-  </ul>
-</nav>
-</header>
+    <!-- Menu Bar -->
+    <header>
+        <nav class="navbar navbar-default container">
+            <!-- Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">PostIt!</a>
+            </div>
+            <!-- Left-aligned items -->
+            <div class="navbar-left input-group">
+                <input id="searchTerm" class="form-control" placeholder="O que você procura?"></input>
+            </div>
+            <!-- Right-aligned items -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="change-layout" class="glyphicon glyphicon-align-justify"></a></li>
+                <li><a id="showHelp" class="glyphicon glyphicon-question-sign"></a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Conteúdo -->
-<section class="container">
-  <!-- Cadastro de um novo post-it -->
-  <form class="form-group input-group">
-    <textarea id="conteudoPostIt" class="form-control" placeholder="Digite aqui o conteúdo do novo post-it"></textarea>
-    <div class="input-group-btn">
-      <button id="salvarPostIt" type="button" class="btn btn-default">Salvar</button>
-    </div>
-  </form>
+    <!-- Content -->
+    <section class="container">
+        <!-- Post-It creation -->
+        <form class="form-group input-group">
+            <textarea id="content" class="form-control" placeholder="Conteúdo do novo post-it"></textarea>
+            <div class="input-group-btn">
+                <button id="save" type="button" class="btn btn-default">Salvar</button>
+            </div>
+        </form>
 
-  <!-- Exibição dos post-its -->
-  <div class="row">
-    <div id="postit_3" data-ref="3" class="postit col-sm-4">
-      <article class="panel panel-default panel-body postItAmarelo">
-        <div class="botoes-postit">
-          <a class="excluirPostIt glyphicon glyphicon-remove"></a>
-          <a class="botaoAmarelo glyphicon glyphicon-tint"></a>
-          <a class="botaoVerde glyphicon glyphicon-tint"></a>
-          <a class="botaoRosa glyphicon glyphicon-tint"></a>
-          <a class="botaoAzul glyphicon glyphicon-tint"></a>
-        </div>
-          <p>Bem-vindo ao Post-It!<br />Um mural on-line.</p>
-      </article>
-    </div>
-    <div id="postit_2" data-ref="2" class="postit col-sm-4">
-      <article class="panel panel-default panel-body postItAmarelo">
-        <div class="botoes-postit">
-          <a class="excluirPostIt glyphicon glyphicon-remove"></a>
-          <a class="botaoAmarelo glyphicon glyphicon-tint"></a>
-          <a class="botaoVerde glyphicon glyphicon-tint"></a>
-          <a class="botaoRosa glyphicon glyphicon-tint"></a>
-          <a class="botaoAzul glyphicon glyphicon-tint"></a>
-        </div>
-        <p>Você pode criar novos post-its, pesquisar pelos existentes ou excluí-los.</p>
-      </article>
-    </div>
-    <div id="postit_1" data-ref="1" class="postit col-sm-4">
-      <article class="panel panel-default panel-body postItAmarelo">
-        <div class="botoes-postit">
-          <a class="excluirPostIt glyphicon glyphicon-remove"></a>
-          <a class="botaoAmarelo glyphicon glyphicon-tint"></a>
-          <a class="botaoVerde glyphicon glyphicon-tint"></a>
-          <a class="botaoRosa glyphicon glyphicon-tint"></a>
-          <a class="botaoAzul glyphicon glyphicon-tint"></a>
-        </div>
-        <p>Esta aplicação é 100% front-end e usa apenas HTML, CSS e JavaScript.</p>
-      </article>
-    </div>
-  </div>
-</section>
+        <!-- Post-It exibition -->
+        <div class="row"></div>
+    </section>
 
-<!-- JavaScript -->
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/postit-controller.js"></script>
-<script type="text/javascript" src="js/altera-layout.js"></script>
-<script type="text/javascript" src="js/ajuda.js"></script>
-<script type="text/javascript" src="js/colorir.js"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/js/postit-controller.js"></script>
+    <script type="text/javascript" src="lib/js/button.js"></script>
+    <script type="text/javascript" src="lib/js/postit.js"></script>
+    <script type="text/javascript" src="lib/js/change-layout.js"></script>
+    <script type="text/javascript" src="lib/js/postit-factory.js"></script>
+    <script type="text/javascript" src="lib/js/colorize.js"></script>
 </body>
 </html>
