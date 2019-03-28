@@ -1,0 +1,20 @@
+@media (max-width: 768px) {#change-layout {display: none;}}
+body {background-color: #dbd2ce;}
+
+/* New Post-It Input */
+.form-control {border-color: #866758;}
+
+/* Form Button */
+.btn-default {
+    border-color: #564036;
+    background-image: linear-gradient(to bottom,#866758 0,#664a3c 100%);
+    color: #fff;
+    text-shadow: 0 1px 0 #664a3c;
+}
+
+.btn-default:focus, .btn-default:hover {
+    background-color: #564036;
+    border-color: #564036;
+    color: #b7a59d;
+}
+

@@ -1,0 +1,17 @@
+.delete,
+.yellow-button,
+.green-button,
+.pink-button,
+.blue-button
+{margin: 2px;}
+
+.delete {color: #bf0101;}
+.yellow-button {color: #e2d466;}
+.green-button {color: #00bb27;}
+.pink-button {color: #ff4ec3;}
+.blue-button {color: #4298d6;}
+
+.blue-postit {border-color: #4298d6; background-color: #67bbfb;}
+.green-postit {border-color: #00bb27; background-color: #32e556;}
+.pink-postit {border-color: #ff4ec3; background-color: #fca4dd;}
+.yellow-postit {border-color: #e2d466; background-color: #faeb6f;}

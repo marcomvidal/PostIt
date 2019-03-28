@@ -1,0 +1,28 @@
+.navbar-default {
+    background-image: linear-gradient(to bottom,#664a3c 0,#866758 100%);
+    border-color: #564036;
+}
+
+.navbar-form .form-control {border-color: #564036;}
+
+/* Icons */
+.navbar-default .navbar-brand,
+.glyphicon-align-justify:before,
+.glyphicon-th:before,
+.glyphicon-question-sign:before {
+    color: #fff;
+    text-shadow: 0 1px 0 #564036;
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover
+{color: #564036;}
+
+/* Positioning */
+@media (min-width: 768px) {
+    .navbar-left {
+        float: left!important;
+        width: 33%;
+        padding-top: 7px;
+    }
+}
