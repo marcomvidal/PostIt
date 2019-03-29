@@ -1,8 +1,10 @@
 # Post-It
-Aplicativo completamente desenvolvido em front-end. Para exibição, criação e personalização de post-its.
+Quadro de Post-Its armazenados em RAM, permitindo operações de criação, exclusão e visualização.
 
 ## Ferramentas utilizadas
-- JavaScript
-- jQuery 3.2.1
+- ECMAScript 6
+- jQuery 3.3.1
 - HTML5 e CSS3
-- Bootstrap 3
+- Bootstrap 3.3.7
+- Gulp 4.0
+- Babel 7.4, transpilando para ES5
