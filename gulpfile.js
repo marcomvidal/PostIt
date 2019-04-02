@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 // Libraries
-const gulpCopy = require("gulp-copy");
+const copy = require("gulp-copy");
 // CSS
 const cleanCSS = require("gulp-clean-css");
 const concatCSS = require("gulp-concat-css");
@@ -12,13 +12,13 @@ const concat = require("gulp-concat");
 
 gulp.task("lib", async () => {
     return gulp.src("lib/bootstrap/**")
-        .pipe(gulpCopy("dist/", { prefix: 1 }));
+        .pipe(copy("dist/", { prefix: 1 }));
 });
 
 gulp.task("css", async () => {
     return gulp.src("src/css/*.css")
-        .pipe(cleanCSS({level: {1: {specialComments: 0}}}))
         .pipe(concatCSS("style.css"))
+        .pipe(cleanCSS({level: {1: {specialComments: 0}}}))
         .pipe(gulp.dest("dist"));
 });
 
